@@ -1,4 +1,5 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
     --bg-color:#1f242d;
@@ -14,6 +15,10 @@
     --text-color:#fff;
     --main-color:#0ef;
 }
+.top-10{
+    margin-top: 10rem;
+}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -63,6 +68,9 @@ section{
     justify-content: center;
     align-items: center;
 }
+.home-content{
+    width: 45%;
+}
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -74,6 +82,7 @@ section{
 }
 .home-content p{
     font-size: 1.6rem;
+    text-align: justify;
 }
 span{
     color: var(--main-color);
@@ -89,6 +98,13 @@ span{
     border-radius: 50%;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media i{
+    font-size: 1.5rem;
+}
+.social-media:hover{
+    box-shadow: 0 0 1rem  var(--main-color);
 }
 .btn{
     display: inline;
@@ -105,6 +121,9 @@ span{
 .btn:hover{
     box-shadow: none;
 }
+.home-img img{
+    width: 30vw;
+}
 .about{
     display: flex;
     justify-content: center;
@@ -113,6 +132,9 @@ span{
 }
 .about-img img{
     width: 35vw;
+}
+.about-content{
+    width: 50%;
 }
 .heading{
     text-align: center;
@@ -128,10 +150,16 @@ span{
 .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    text-align: justify;
 
 }
+.services, .portifolio-container{
+    width: 95%;
+    margin: auto;
+}
 .services h2{
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+
 }
 .services-container{
     display: flex;
@@ -164,9 +192,6 @@ span{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
-.portifolio{
-    background: var(--second-bg-color);
-}
 .portifolio h2{
     margin-bottom: 4rem;
 }
@@ -185,6 +210,7 @@ span{
 }
 .portifolio-box img{
     width: 100%;
+    height: 35vw;
 }
 .portifolio-box .portifolio-layer{
     position: absolute;
@@ -222,14 +248,14 @@ span{
     border-radius: 50%;
 }
 .portifolio-layer a i{
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--bg-color);
 }
 .contact h2{
     margin-bottom: 3rem;
 }
 .contact form{
-    max-width: 70rem;
+    width: 80%;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
@@ -255,6 +281,10 @@ span{
     margin-top: 2rem;
     cursor: pointer;
 }
+.contact form input:hover, .contact form textarea:hover{
+    border: 1px solid var(--main-color);
+    transform: scale(1.02);
+}
 .footer{
     display: flex;
     justify-content: space-between;
@@ -264,7 +294,7 @@ span{
     background: var(--second-bg-color);
 }
 .footer-text p{
-    font-size: 1,6rem;
+    font-size: 1.5rem;
 }
 .footer-iconTop a{
     display: inline-flex;
