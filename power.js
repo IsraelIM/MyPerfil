@@ -1,3 +1,14 @@
+function aboutMore(){
+    let aboutMore = document.querySelector('.about-more');
+    aboutMore.style.display='block'
+    
+
+}
+/*let aboutBtn = document.querySelector('.about-btn');
+;
+aboutBtn.onclick= () =>{
+    alert();
+};*/
 //Menu Flexivel
 function removeNavbar(){
     menuIcon.classList.replace('fa-times','fa-navicon');
@@ -46,8 +57,7 @@ window.onscroll = () =>{
     if(screen.width < 769)
         removeNavbar();
 };
-    //Animaçao de entrada
-    /********
+/*    //Animaçao de entrada
     ScrollReveal({
         reset:true,
         distance:'80px',
@@ -58,13 +68,12 @@ window.onscroll = () =>{
     ScrollReveal().reveal('.home-img, .services-container, .portifolio-box, contact form', {origin:'bottom'});
     ScrollReveal().reveal('.home-content h1, .about-img ', {origin:'left'});
     ScrollReveal().reveal('.home-content p, .about-content ', {origin:'right'});
-    *****************/
+    const Typed = new Typed('.multiple-text',{
+        String: ['Developer','Engenheiro',
+        'Coach','Responsavel de T.I','Docente'],
+        typeSpeed:100,
+        backSpeed:100,
+        backDelay:1000,
+        loop: true
 
-const Typed = new Typed('.multiple-text',{
-    String: ['Backend Developer','Funcionario Publico','Responsavel de T.I'],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop: true
-
-});
+    });*/
