@@ -1,9 +1,23 @@
 //Menu Flexivel
+function removeNavbar(){
+    menuIcon.classList.replace('fa-times','fa-navicon');
+    navbar.style='display:none'
+    icon = true;
+}
 let menuIcon = document.querySelector('#menu-icon');
+let icon = true;
 let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+    if (icon)
+    {
+        menuIcon.classList.replace('fa-navicon','fa-times');
+        navbar.style='display:block';
+        icon = false;
+    }
+    else
+    {
+        removeNavbar();
+    }
 };
 
 // Link de Selecção do Menu
@@ -28,4 +42,7 @@ window.onscroll = () =>{
     let header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
+    // Remove in click
+    if(document.querySelector('#menu-icon').style.display=''=='')
+        removeNavbar();
 };
