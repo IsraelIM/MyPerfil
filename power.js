@@ -43,6 +43,6 @@ window.onscroll = () =>{
 
     header.classList.toggle('sticky', window.scrollY > 100);
     // Remove in click
-    if(document.querySelector('#menu-icon').style.display=''=='')
-        removeNavbar();
+    if(screen.width < 769)
+    removeNavbar();
 };
