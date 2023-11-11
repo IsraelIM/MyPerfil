@@ -1,23 +1,18 @@
+//Criacao de variaves Menu Flexivel
+let menuIcon = document.querySelector('#menu-icon-top');
+let navbar = document.querySelector('.navbar');
+let icon = true;
+//Funçao ver mais infomaçoes
 function aboutMore(){
     let aboutMore = document.querySelector('.about-more');
-    aboutMore.style.display='block'
-    
-
+    aboutMore.style.display='block';
 }
-/*let aboutBtn = document.querySelector('.about-btn');
-;
-aboutBtn.onclick= () =>{
-    alert();
-};*/
-//Menu Flexivel
+//Funçao de Remover a navBar apos a acçao
 function removeNavbar(){
     menuIcon.classList.replace('fa-times','fa-navicon');
     navbar.style='display:none'
     icon = true;
 }
-let menuIcon = document.querySelector('#menu-icon');
-let icon = true;
-let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     if (icon)
     {
@@ -30,18 +25,16 @@ menuIcon.onclick = () => {
         removeNavbar();
     }
 };
-
-// Link de Selecção do Menu
+// Link de Selecção do Menu Activo
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
-
+//Acçoes determinada para o rolar da tela
 window.onscroll = () =>{
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 160;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-
         if(top >= offset && top < offset + height){
             navlinks.forEach(links => {
                 links.classList.remove('active');
@@ -51,23 +44,24 @@ window.onscroll = () =>{
     });
     // Navbar Boblavel
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
     // Remove in click
     if(screen.width < 769)
         removeNavbar();
 };
-/*    //Animaçao de entrada
+/*
+    //Animaçao de Movimentaçao da Tela
     ScrollReveal({
-        reset:true,
+        reset:false,
         distance:'80px',
         duration: 2000,
-        delay: 200
+        delay: 150
     });
     ScrollReveal().reveal('.home-content, .heading', {origin:'top'});
     ScrollReveal().reveal('.home-img, .services-container, .portifolio-box, contact form', {origin:'bottom'});
     ScrollReveal().reveal('.home-content h1, .about-img ', {origin:'left'});
     ScrollReveal().reveal('.home-content p, .about-content ', {origin:'right'});
+    //Animaçao da frase de impacto
     const Typed = new Typed('.multiple-text',{
         String: ['Developer','Engenheiro',
         'Coach','Responsavel de T.I','Docente'],

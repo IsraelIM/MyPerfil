@@ -60,7 +60,7 @@ section{
 .navbar a.active{
     color: var(--main-color);
 }
-#menu-icon{
+#menu-icon-top{
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
@@ -357,7 +357,7 @@ span{
     }
 }
 @media (max-width: 768px) {
-    #menu-icon{
+    #menu-icon-top{
         display: block;
     }
     .navbar{
@@ -403,6 +403,9 @@ span{
     .about{
         flex-direction: column-reverse;
         margin-top: -5rem;
+    }
+    .about-content p{
+        font-size: 1.6rem;
     }
     .portifolio-box h4, .portifolio-box p
     .portifolio-box a{
