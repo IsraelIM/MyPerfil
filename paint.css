@@ -14,7 +14,8 @@
     --second-bg-color:#323946;
     --text-color:#fff;
     --main-color:#0ef;
-}
+}/*
+*/
 .top-10{
     margin-top: 10rem;
 }
@@ -58,6 +59,13 @@ section{
 }
 .navbar a:hover,
 .navbar a.active{
+    color: var(--main-color);
+}
+.navbar #view-mode i{
+    font-size: 3rem;
+    position: absolute;
+    margin-top: -.5rem;
+    margin-left: .5rem;
     color: var(--main-color);
 }
 #menu-icon-top{
@@ -172,6 +180,7 @@ span{
     text-align: justify;
 }
 .about-more{
+    transition: 2s ease-in-out;
     display: none;
 }
 .services, .portifolio-container{
@@ -357,6 +366,12 @@ span{
     }
 }
 @media (max-width: 768px) {
+    :root{
+        --bg-color:#fff;
+        --second-bg-color:#e3e6f3;
+        --text-color:#1a1a1a;
+        --main-color:#088178;
+    }
     #menu-icon-top{
         display: block;
     }

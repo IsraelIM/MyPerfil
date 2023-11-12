@@ -1,12 +1,32 @@
-//Criacao de variaves Menu Flexivel
+//Criacao de variaves Globais
 let menuIcon = document.querySelector('#menu-icon-top');
+let viewMode = document.querySelector('#view-mode');
+let iconToggle = document.querySelector('#view-mode i');
 let navbar = document.querySelector('.navbar');
-let icon = true;
+let aboutRead = document.getElementById('about-read');
+let icon, darkMode = (screen.width < 769) ? false:true;
 //Funçao ver mais infomaçoes
-function aboutMore(){
+aboutRead.onclick = () => {
     let aboutMore = document.querySelector('.about-more');
-    aboutMore.style.display='block';
+    if (aboutMore.style.display=='block') {
+        aboutMore.style.display='none';
+        var home='#home';
+        aboutRead.innerText="Read More";
+    }else{
+        aboutMore.style.display='block';
+        aboutRead.innerText="Read Less";
+    }
 }
+//Funcao view Maode
+viewMode.onclick = () =>{
+   let allDocument =  document.getElementById('all-document');
+   if (darkMode) {
+    allDocument.style = '--bg-color:#fff;--second-bg-color:#e3e6f3;--text-color:#1a1a1a;--main-color:#088178;';
+   } else {
+    allDocument.style = '--bg-color:#1f242d;--second-bg-color:#323946;--text-color:#fff;--main-color:#0ef;';
+   }
+   viewMode.style.display='none';
+};
 //Funçao de Remover a navBar apos a acçao
 function removeNavbar(){
     menuIcon.classList.replace('fa-times','fa-navicon');
@@ -14,6 +34,8 @@ function removeNavbar(){
     icon = true;
 }
 menuIcon.onclick = () => {
+    iconToggle.classList.replace('fa-toggle-on','fa-toggle-off'); 
+    iconToggle.style.color='#000';
     if (icon)
     {
         menuIcon.classList.replace('fa-navicon','fa-times');
