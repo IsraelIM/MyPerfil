@@ -83,13 +83,14 @@ window.onscroll = () =>{
     ScrollReveal().reveal('.home-img, .services-container, .portifolio-box, contact form', {origin:'bottom'});
     ScrollReveal().reveal('.home-content h1, .about-img ', {origin:'left'});
     ScrollReveal().reveal('.home-content p, .about-content ', {origin:'right'});
-    //Animaçao da frase de impacto
-    const Typed = new Typed('.multiple-text',{
-        String: ['Developer','Engenheiro',
+    //Animaçao da frase de impacto*/
+
+    const typed = new Typed('.multiple-text',{
+        strings: ['Developer','Engenheiro',
         'Coach','Responsavel de T.I','Docente'],
-        typeSpeed:100,
+        typeSpeed:300,
         backSpeed:100,
         backDelay:1000,
         loop: true
 
-    });*/
+    });
